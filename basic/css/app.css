@@ -1,0 +1,66 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica;
+}
+header, footer {
+    padding: 10px;
+}
+header {
+    margin: 10px 10px 0 10px;
+    background: lightgreen;
+}
+footer {
+    margin: 0px 10px 10px 10px;
+    text-align: right;
+    background: pink;
+}
+.app {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.app-body {
+    display: flex;
+    flex: 1;
+}
+.app-content, .app-nav {
+    padding: 10px;
+    margin: 10px;
+    background: lightblue;
+}
+.app-content {
+    flex: 1;
+}
+.app-nav {
+}
+.app, .app-body {
+    display: flex;
+    flex-direction: column;
+}
+
+/*TOP NAV*/
+
+@media (min-width: 768px) {
+    .app-body {
+        flex-direction: row;
+        flex: 1;
+    }
+    .app-content {
+        flex: 1;
+    }
+    .app-nav {
+        flex: 0 0 12em;
+        margin-right: 0;
+        order: -1; /* put the nav on the left */
+    }
+}
+
+/*SIDE NAV*/
+
+@media (max-width: 768px) {
+    .app-nav {
+        flex: 0 0 1;
+        margin-bottom: 0;
+    }
+}
